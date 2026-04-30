@@ -23,11 +23,6 @@ function OtpVerification() {
       toast.error("Ingresa el código OTP de 6 dígitos");
       return;
     }
-    // Validación adicional para asegurarse de que el código OTP solo contenga dígitos numéricos
-    if (!/^\d{6}$/.test(otpCode)) {
-      toast.error("El código OTP solo puede contener dígitos numéricos");
-      return;
-    }
 
     // Si las validaciones pasan, se procede a enviar el código OTP al backend para su verificación
     setIsSubmitting(true);
